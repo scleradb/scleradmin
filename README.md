@@ -22,5 +22,7 @@ optional arguments:
                         $SCLERA_HOME if present, otherwise ~/sclera)
   --overwrite           overwrite home directory if present
 
-In --add and --remove above, 'package' has the format 'org:name:version', where 'org:' and ':version' are optional. When not specified, 'org' defaults to 'com.scleradb' and 'version' defaults to the latest integration version.
+In --add and --remove above, 'package' has the format 'org:name:version', where
+'org:' and ':version' are optional. When not specified, 'org' defaults to
+'com.scleradb' and 'version' defaults to the latest integration version.
 ```
