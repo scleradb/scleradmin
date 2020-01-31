@@ -240,16 +240,20 @@ def downloadFile(url, targetDir, target = None, chunkSize = 4096):
 
     logging.info("Downloading {} to {}".format(url, targetPath))
 
-    response = requests.get(url, stream = True)
-
     try:
+        response = requests.get(url, stream = True)
         with open(targetPath, "wb") as f:
             for chunk in response.iter_content(chunk_size = chunkSize): 
                 if chunk: # filter out keep-alive new chunks
                     f.write(chunk)
-    except:
+    except Exception as e:
         targetPath.unlink(missing_ok = True)
-        raise
+        logging.error(e)
+        raise Exception(os.linesep.join([
+            "Could not download dependencies from the internet.",
+            "Please see the log for details:",
+            logging.getLoggerClass().root.handlers[0].baseFilename
+        ]))
 
     return targetPath
 
