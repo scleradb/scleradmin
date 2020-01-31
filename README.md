@@ -25,4 +25,6 @@ optional arguments:
 In --add and --remove above, 'package' has the format 'org:name:version', where
 'org:' and ':version' are optional. When not specified, 'org' defaults to
 'com.scleradb' and 'version' defaults to the latest integration version.
+
+Sclera requires Java version 8 or higher.
 ```

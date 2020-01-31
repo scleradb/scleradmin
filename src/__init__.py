@@ -9,7 +9,7 @@ def main():
 
     parser = argparse.ArgumentParser(
         description = "Sclera Platform Administration",
-        epilog = "In --add and --remove above, 'package' has the format 'org:name:version', where 'org:' and ':version' are optional. When not specified, 'org' defaults to 'com.scleradb' and 'version' defaults to the latest integration version."
+        epilog = "In --add and --remove above, 'package' has the format 'org:name:version', where 'org:' and ':version' are optional. When not specified, 'org' defaults to 'com.scleradb' and 'version' defaults to the latest integration version. Sclera requires Java version 8 or higher."
     )
 
     parser.add_argument(
@@ -45,5 +45,7 @@ def main():
     args = parser.parse_args()
     try:
         install.run(args)
+    except ConnectionError:
+        sys.exit("Could not connect to the internet. Exiting.")
     except Exception as e:
         sys.exit(e)
