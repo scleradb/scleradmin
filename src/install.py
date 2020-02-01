@@ -73,9 +73,7 @@ def run(args, platform = sys.platform):
 
     # remove packages
     for artifact in remArtifacts:
-        print("Removing {} : {} : {} ...".format(
-            artifact.org, artifact.name, artifact.version
-        ), end = " ", flush = True)
+        print("Removing: {} ...".format(artifact), end = " ", flush = True)
 
         try:
             removeArtifact(artifact = artifact, bootDir = dirs["boot"])
@@ -102,9 +100,7 @@ def run(args, platform = sys.platform):
     logging.info("Removing: {}".format(maskedArtifacts))
 
     for artifact in maskedArtifacts:
-        print("Removing: {} / {} - version {} ...".format(
-            artifact.org, artifact.name, artifact.version
-        ), end = " ", flush = True)
+        print("Removing: {} ...".format(artifact), end = " ", flush = True)
 
         try:
             removeArtifact(artifact = artifact, bootDir = dirs["boot"])
@@ -146,9 +142,9 @@ def run(args, platform = sys.platform):
     # add packages and collect the class paths
     paths = []
     for artifact in addArtifacts:
-        print("{} {} : {} : {} ...".format(
+        print("{} {} ...".format(
             "Reinstalling" if artifact in prevInstalled else "Installing",
-            artifact.org, artifact.name, artifact.version
+            artifact
         ), end = " ", flush = True)
 
         try:
