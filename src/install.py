@@ -73,7 +73,7 @@ def run(args, platform = sys.platform):
 
     # remove packages
     for artifact in remArtifacts:
-        print("Removing: {} / {} - version {} ...".format(
+        print("Removing {} : {} : {} ...".format(
             artifact.org, artifact.name, artifact.version
         ), end = " ", flush = True)
 
