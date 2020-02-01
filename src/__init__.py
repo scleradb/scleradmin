@@ -28,6 +28,11 @@ def main():
     )
 
     parser.add_argument(
+        "--update", action = "store_true",
+        help = "update the installed packages to the latest version"
+    )
+
+    parser.add_argument(
         "--home", metavar = "homedir", type = str, nargs = 1,
         default = [os.getenv("SCLERA_HOME", os.path.expanduser("~/sclera"))],
         help = "home directory location (if not specified, will use $SCLERA_HOME if present, otherwise ~/sclera)"

@@ -62,7 +62,7 @@ def run(args, platform = sys.platform):
                 "Cannot remove package {} (not installed)".format(artifact.name)
             )
 
-    if not args.install:
+    if not (args.install or args.update):
         # prune packages which are already present
         addArtifacts = [a for a in addArtifacts if a not in prevInstalled]
         if not addArtifacts and not remArtifacts:
