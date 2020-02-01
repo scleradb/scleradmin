@@ -6,7 +6,7 @@ A tool to install [Sclera](https://github.com/scleradb/sclera) command line, and
 
 ```
        scleradmin [-h] [--install] [--add package [package ...]]
-                  [--remove package [package ...]] [--home homedir]
+                  [--remove package [package ...]] [--update] [--home homedir]
                   [--overwrite]
 
 Sclera Platform Administration
@@ -18,13 +18,14 @@ optional arguments:
                         add packages
   --remove package [package ...]
                         remove packages
+  --update              update the installed packages to the latest version
   --home homedir        home directory location (if not specified, will use
                         $SCLERA_HOME if present, otherwise ~/sclera)
   --overwrite           overwrite home directory if present
 
-In --add and --remove above, 'package' has the format 'org:name:version', where
-'org:' and ':version' are optional. When not specified, 'org' defaults to
-'com.scleradb' and 'version' defaults to the latest integration version.
+In --add and --remove above, 'package' has the format 'org:name:version',
+where 'org:' and ':version' are optional. When not specified, 'org' defaults
+to 'com.scleradb' and 'version' defaults to the latest integration version.
 
 Sclera requires Java version 8 or higher.
 ```
