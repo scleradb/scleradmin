@@ -201,7 +201,9 @@ def scleraDirs(homeDirStr, isInstall, isOverwrite):
         raise ValueError("Please install Sclera first, using --install")
 
     if isInstall and not isOverwrite and d["sclera"].exists():
-        sys.exit("Directory exists, cannot overwrite: {}".format(d["sclera"]))
+        raise ValueError(
+            "Directory exists, cannot overwrite: {}".format(d["sclera"])
+        )
 
     for targetDir in d.values():
         targetDir.mkdir(parents = True, exist_ok = True)
