@@ -15,6 +15,9 @@ class Artifact:
     def __repr__(self):
         return "Artifact({}, {}, {})".format(self.org, self.name, self.version)
 
+    def __str__(self):
+        return "{} : {} : {}".format(self.org, self.name, self.version)
+
 def pathGen():
     """Classpath generator, \
        works with SBT launcher to install dependencies and emit classpaths"""
