@@ -197,6 +197,9 @@ def scleraDirs(homeDirStr, isInstall, isOverwrite):
     d["boot"] = d["install"] / "boot"
     d["log"] = d["install"] / "log"
 
+    if not isInstall and not d["sclera"].exists():
+        raise ValueError("Please install Sclera first, using --install")
+
     if isInstall and not isOverwrite and d["sclera"].exists():
         sys.exit("Directory exists, cannot overwrite: {}".format(d["sclera"]))
 
