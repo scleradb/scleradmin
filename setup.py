@@ -17,6 +17,7 @@ setuptools.setup(
     package_data={
         "src": ["config/sclera.conf"],
     },
+    install_requires=['requests'],
     include_package_data=True,
     classifiers=[
         "Programming Language :: Python :: 3.8",
