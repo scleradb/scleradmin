@@ -24,7 +24,7 @@ def run(args, platform = sys.platform):
 
     # home subdirectory structue
     dirs = scleraDirs(
-        homeDirStr = args.home[0],
+        rootDirStr = args.root[0],
         isInstall = args.install,
         isOverwrite = args.overwrite
     )
@@ -179,11 +179,11 @@ def run(args, platform = sys.platform):
     print("Sclera installed at: {}".format(dirs["sclera"]))
     print("Executable script: {}".format(scriptPath))
 
-def scleraDirs(homeDirStr, isInstall, isOverwrite):
+def scleraDirs(rootDirStr, isInstall, isOverwrite):
     """Sclera installation directory structure"""
 
     d = {}
-    d["sclera"] = pathlib.Path(homeDirStr).resolve()
+    d["sclera"] = pathlib.Path(rootDirStr).resolve()
     d["bin"] = d["sclera"] / "bin"
     d["home"] = d["sclera"] / "home"
     d["config"] = d["sclera"] / "config"

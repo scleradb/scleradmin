@@ -14,7 +14,7 @@ def main():
 
     parser.add_argument(
         "--install", action = "store_true",
-        help = "install Sclera in the home directory"
+        help = "install Sclera in the root directory"
     )
 
     parser.add_argument(
@@ -33,14 +33,14 @@ def main():
     )
 
     parser.add_argument(
-        "--home", metavar = "homedir", type = str, nargs = 1,
-        default = [os.getenv("SCLERA_HOME", os.path.expanduser("~/sclera"))],
-        help = "home directory location (if not specified, will use $SCLERA_HOME if present, otherwise ~/sclera)"
+        "--root", metavar = "rootdir", type = str, nargs = 1,
+        default = [os.getenv("SCLERA_ROOT", os.path.expanduser("~/sclera"))],
+        help = "root directory location (if not specified, will use $SCLERA_ROOT if present, otherwise ~/sclera)"
     )
 
     parser.add_argument(
         "--overwrite", action = "store_true",
-        help = "overwrite home directory if present"
+        help = "overwrite root directory if present"
     )
 
     if len(sys.argv) == 1:
