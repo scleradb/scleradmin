@@ -9,7 +9,7 @@ def main():
 
     parser = argparse.ArgumentParser(
         description = "Sclera Platform Administration",
-        epilog = "In --add and --remove above, 'package' has the format 'org:name:version', where 'org:' and ':version' are optional. When not specified, 'org' defaults to 'com.scleradb' and 'version' defaults to the latest integration version. Sclera requires Java version 8 or higher."
+        epilog = "In --add and --remove above, 'plugin' has the format 'org:name:version', where 'org:' and ':version' are optional. When not specified, 'org' defaults to 'com.scleradb' and 'version' defaults to the latest integration version. Sclera requires Java version 8 or higher."
     )
 
     parser.add_argument(
@@ -18,18 +18,18 @@ def main():
     )
 
     parser.add_argument(
-        "--add", metavar = "package", type = str, nargs = "+",
-        help = "add packages"
+        "--add", metavar = "plugin", type = str, nargs = "+",
+        help = "add plugins"
     )
 
     parser.add_argument(
-        "--remove", metavar = "package", type = str, nargs = "+",
-        help = "remove packages"
+        "--remove", metavar = "plugin", type = str, nargs = "+",
+        help = "remove plugins"
     )
 
     parser.add_argument(
         "--update", action = "store_true",
-        help = "update the installed packages to the latest version"
+        help = "update Sclera and installed plugins to the latest version"
     )
 
     parser.add_argument(
