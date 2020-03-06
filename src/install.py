@@ -375,7 +375,7 @@ def posixSpec(paths):
 def initSclera(scriptPath):
     """Initialize Sclera after installation"""
 
-    cmd = ["{}".format(scriptPath), "-install", "exit"]
+    cmd = ["{}".format(scriptPath), "--init"]
     logging.info("Executing {}".format(cmd))
 
     proc = subprocess.run(cmd, capture_output = True)
