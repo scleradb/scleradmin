@@ -23,9 +23,10 @@ optional arguments:
                         $SCLERA_ROOT if present, otherwise ~/sclera)
   --overwrite           overwrite root directory if present
 
-In --add and --remove above, 'plugin' has the format 'org:name:version',
-where 'org:' and ':version' are optional. When not specified, 'org' defaults
-to 'com.scleradb' and 'version' defaults to the latest integration version.
+In --add and --remove above, 'plugin' has the format 'org:name:version', where
+'org:' and ':version' are optional. When not specified, 'org' defaults to
+'com.scleradb' and 'version' defaults to the latest version (currently,
+4.0-SNAPSHOT).
 
 Sclera requires Java version 8 or higher.
 ```
