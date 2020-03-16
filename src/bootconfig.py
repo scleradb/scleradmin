@@ -19,7 +19,8 @@ def bootPropsConfig(artifact, resources, targetDir, scalaVersion = "2.13.1"):
     repositories["local"] = None
     repositories["typesafe-ivy-releases"] = "http://repo.typesafe.com/typesafe/ivy-releases/, [organization]/[module]/[revision]/[type]s/[artifact](-[classifier]).[ext]"
     repositories["maven-central"] = None
-
+    repositories["Sonatype OSS Snapshots"] = "https://oss.sonatype.org/content/repositories/snapshots"
+    
     boot = {}
     boot["directory"] = targetDir
     
