@@ -5,9 +5,9 @@ with open("README.md", "rt") as f:
 
 setuptools.setup(
     name="scleradmin",
-    version="0.0.1",
+    version="0.1",
     author="Sclera, Inc.",
-    author_email="contact@scleradb.com",
+    author_email="dev@scleradb.com",
     description="Sclera platform administration",
     long_description=long_description,
     long_description_content_type="text/markdown",
