@@ -168,7 +168,7 @@ def run(args, platform = sys.platform):
     paths.extend(str(dirs[x]) for x in ("config", "extlib"))
     scriptPath = installScript(
         paths = paths,
-        homeDir = dirs["home"],
+        rootDir = dirs["sclera"],
         targetDir = dirs["bin"],
         platform = platform
     )
@@ -331,7 +331,7 @@ def bootPropertiesPath(artifact, resources, targetDir, bootDir):
 
     return targetPath
 
-def installScript(paths, homeDir, targetDir, platform):
+def installScript(paths, rootDir, targetDir, platform):
     """Create and store the script in the specified directory"""
 
     (scriptName, preface, classPath, args) = \
@@ -339,9 +339,9 @@ def installScript(paths, homeDir, targetDir, platform):
 
     template = """\
         |{}
-        |java -Xmx512m -classpath "{}" -DSCLERA_HOME="{}" {} {} \
+        |java -Xmx512m -classpath "{}" -DSCLERA_ROOT="{}" {} {} \
     """.format(
-        preface, classPath, homeDir,
+        preface, classPath, rootDir,
         "com.scleradb.interfaces.shell.Repl", args
     )
 
