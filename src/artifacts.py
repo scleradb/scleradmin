@@ -1,10 +1,12 @@
+from . import versionmap
+
 class Artifact:
     """Installable artifact"""
 
     def __init__(self, org, name, version = None):
         self.org = org
         self.name = name
-        self.version = version if version else "4.0-SNAPSHOT"
+        self.version = version if version else versionmap.latest(org, name)
 
     def __eq__(self, x):
         return (self.org, self.name, self.version) == (x.org, x.name, x.version)

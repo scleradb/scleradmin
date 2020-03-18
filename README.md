@@ -25,8 +25,7 @@ optional arguments:
 
 In --add and --remove above, 'plugin' has the format 'org:name:version', where
 'org:' and ':version' are optional. When not specified, 'org' defaults to
-'com.scleradb' and 'version' defaults to the latest version (currently,
-4.0-SNAPSHOT).
+'com.scleradb' and 'version' defaults to the latest installable version.
 
 Sclera requires Java version 8 or higher.
 ```
