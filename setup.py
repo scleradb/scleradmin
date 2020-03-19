@@ -30,7 +30,7 @@ setuptools.setup(
         "Intended Audience :: Information Technology",
         "Topic :: System :: Installation/Setup"
     ],
-    python_requires=">=3.4",
+    python_requires=">=3.8",
     entry_points={
         "console_scripts": [
             "scleradmin = src:main",
