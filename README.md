@@ -1,6 +1,6 @@
 # Sclera Platform Administration Tool
 
-[Sclera](https://scleradb.github.io) is a stand-alone SQL processor with native support for machine learning, data virtualization and streaming data.
+[Sclera](https://scleradb.com) is a stand-alone SQL processor with native support for machine learning, data virtualization and streaming data.
 
 This tool installs Sclera as an independent application with an interactive command-line shell.
 
@@ -67,7 +67,7 @@ This starts the shell, wherein you can interactively run queries. When done, you
     > ^D
     Goodbye!
 
-For details on using the shell, please refer to the [Command Line Shell Reference](https://scleradb.github.io/docs/interface/shell).
+For details on using the shell, please refer to the [Command Line Shell Reference](https://scleradb.com/docs/interface/shell).
 
 ### Root Directory Structure
 
@@ -95,11 +95,11 @@ After installation, the root directory has the following structure:
 
 ## Plugin Management
 
-Sclera provides [a variety of plugins](https://scleradb.github.io/docs/setup/components) that can be added using `scleradmin`. The command syntax is:
+Sclera provides [a variety of plugins](https://scleradb.com/docs/setup/components) that can be added using `scleradmin`. The command syntax is:
 
     > scleradmin --add <plugins> --root <sclera-root>
 
-In the above, `<plugins>` is a space-separated list of plugins to be added, and `<sclera-root>`, [as earlier](#installing-sclera-core-packages-and-shell), is the root directory. For instance, to install the [Sclera - CSV File Connector](https://scleradb.github.io/docs/setup/components#sclera-csv-file-connector) and [Sclera - Text File Connector](https://scleradb.github.io/docs/setup/components#sclera-text-file-connector) plugins, to the Sclera instance installed at `/path/to/sclera` the command is: 
+In the above, `<plugins>` is a space-separated list of plugins to be added, and `<sclera-root>`, [as earlier](#installing-sclera-core-packages-and-shell), is the root directory. For instance, to install the [Sclera - CSV File Connector](https://scleradb.com/docs/setup/components#sclera-csv-file-connector) and [Sclera - Text File Connector](https://scleradb.com/docs/setup/components#sclera-text-file-connector) plugins, to the Sclera instance installed at `/path/to/sclera` the command is: 
 
     > scleradmin --add sclera-csv-plugin sclera-textfiles-plugin --root /path/to/sclera
 
