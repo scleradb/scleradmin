@@ -109,6 +109,8 @@ To remove installed plugins, the syntax is similar. The following command remove
 
 You can specify a list of plugins to add and another list of plugins to remove in the same command.
 
+For a list of available plugins and other components, please refer to the [Sclera Documentation](https://scleradb.com/docs/setup/components/).
+
 ## Updating Installed Packages and Plugins
 
 The following command updates Sclera's core packages as well as the plugins to the latest version:
