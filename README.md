@@ -99,7 +99,7 @@ Sclera provides [a variety of plugins](https://scleradb.com/docs/setup/component
 
     > scleradmin --add <plugins> --root <sclera-root>
 
-In the above, `<plugins>` is a space-separated list of plugins to be added, and `<sclera-root>`, [as earlier](#installing-sclera-core-packages-and-shell), is the root directory. For instance, to install the [Sclera - CSV File Connector](https://scleradb.com/docs/setup/components#sclera-csv-file-connector) and [Sclera - Text File Connector](https://scleradb.com/docs/setup/components#sclera-text-file-connector) plugins, to the Sclera instance installed at `/path/to/sclera` the command is: 
+In the above, `<plugins>` is a space-separated list of plugins to be added, and `<sclera-root>`, [as earlier](#installing-sclera-core-packages-and-shell), is the root directory. For instance, to add the [Sclera - CSV File Connector](https://scleradb.com/docs/setup/components#sclera-csv-file-connector) and [Sclera - Text File Connector](https://scleradb.com/docs/setup/components#sclera-text-file-connector) plugins to the Sclera instance installed at `/path/to/sclera`, the command is: 
 
     > scleradmin --add sclera-csv-plugin sclera-textfiles-plugin --root /path/to/sclera
 
