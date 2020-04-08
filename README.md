@@ -78,7 +78,7 @@ After installation, the root directory has the following structure:
     [<sclera-root>]
       bin/
         sclera.cmd         # executable command file (generated for Windows systems)
-        sclera             # executable bash (generated for Linux, macOS, and other Unix-based systems)
+        sclera             # executable bash script (generated for Linux, macOS, and other Unix-based systems)
       config/
         sclera.conf        # configuration file
       extlib/              # directory for additional libraries, plugins (initially empty)
