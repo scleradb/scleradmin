@@ -2,7 +2,7 @@
 
 [![PyPI version](https://badge.fury.io/py/scleradmin.svg)](https://badge.fury.io/py/scleradmin)
 
-[Sclera](https://scleradb.com) is a stand-alone SQL processor with native support for machine learning, data virtualization and streaming data.
+[Sclera](https://www.scleradb.com) is a stand-alone SQL processor with native support for machine learning, data virtualization and streaming data.
 
 This tool installs Sclera as an independent application with an interactive command-line shell.
 
@@ -69,7 +69,7 @@ This starts the shell, wherein you can interactively run queries. When done, you
     > ^D
     Goodbye!
 
-For details on using the shell, please refer to the [Command Line Shell Reference](https://scleradb.com/docs/interface/shell).
+For details on using the shell, please refer to the [Command Line Shell Reference](https://www.scleradb.com/docs/interface/shell).
 
 ### Root Directory Structure
 
@@ -97,11 +97,11 @@ After installation, the root directory has the following structure:
 
 ## Plugin Management
 
-Sclera provides [a variety of plugins](https://scleradb.com/docs/setup/components) that can be added using `scleradmin`. The command syntax is:
+Sclera provides [a variety of plugins](https://www.scleradb.com/docs/setup/components) that can be added using `scleradmin`. The command syntax is:
 
     > scleradmin --add <plugins> --root <sclera-root>
 
-In the above, `<plugins>` is a space-separated list of plugins to be added, and `<sclera-root>`, [as earlier](#installing-sclera-core-packages-and-shell), is the root directory. For instance, to add the [Sclera - CSV File Connector](https://scleradb.com/docs/setup/components#sclera-csv-file-connector) and [Sclera - Text File Connector](https://scleradb.com/docs/setup/components#sclera-text-file-connector) plugins to the Sclera instance installed at `/path/to/sclera`, the command is: 
+In the above, `<plugins>` is a space-separated list of plugins to be added, and `<sclera-root>`, [as earlier](#installing-sclera-core-packages-and-shell), is the root directory. For instance, to add the [Sclera - CSV File Connector](https://www.scleradb.com/docs/setup/components#sclera-csv-file-connector) and [Sclera - Text File Connector](https://www.scleradb.com/docs/setup/components#sclera-text-file-connector) plugins to the Sclera instance installed at `/path/to/sclera`, the command is: 
 
     > scleradmin --add sclera-csv-plugin sclera-textfiles-plugin --root /path/to/sclera
 
@@ -111,7 +111,7 @@ To remove installed plugins, the syntax is similar. The following command remove
 
 You can specify a list of plugins to add and another list of plugins to remove in the same command.
 
-For a list of available plugins and other components, please refer to the [Sclera Documentation](https://scleradb.com/docs/setup/components/).
+For a list of available plugins and other components, please refer to the [Sclera Documentation](https://www.scleradb.com/docs/setup/components/).
 
 ## Updating Installed Packages and Plugins
 
