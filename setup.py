@@ -8,7 +8,7 @@ setuptools.setup(
     version="1.0-beta-2",
     author="Sclera, Inc.",
     author_email="dev@scleradb.com",
-    description="Sclera platform administration",
+    description="Sclera Platform Administration Tool",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/scleradb/scleradmin",
