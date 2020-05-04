@@ -89,9 +89,14 @@ def run(args, platform = sys.platform):
         # artifacts in addArtifacts mask those in initArtifacts
         addArtifacts = merge(initArtifacts, addArtifacts)
 
-    # artifacts in addArtifacts mask those in prevInstalled
-    # -- enables artifact version change
-    addArtifacts = merge(prevInstalled, addArtifacts)
+    if args.update:
+        # update versions of previously installed artifacts
+        updated = [artifacts.updated(a) for a in prevInstalled]
+        addArtifacts = merge(updated, addArtifacts)
+    else:
+        # artifacts in addArtifacts mask those in prevInstalled
+        # -- enables artifact version change
+        addArtifacts = merge(prevInstalled, addArtifacts)
 
     # remove the masked artifacts
     # necessary because only one version of an artifact should be present

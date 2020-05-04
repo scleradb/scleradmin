@@ -42,6 +42,9 @@ def installed(bootDir):
         for versiondir in namedir.iterdir():
             yield Artifact("com.scleradb", namedir.name, versiondir.name)
 
+def updated(artifact):
+    return Artifact(artifact.org, artifact.name)
+
 def parse(spec):
     """Parse the input artifact specification: <name> or <name>:<version>"""
 
