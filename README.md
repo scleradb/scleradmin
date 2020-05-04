@@ -6,7 +6,7 @@
 
 This tool installs Sclera as an independent application with an interactive command-line shell.
 
-**Prerequisite:** Sclera requires [Java 11 or higher](https://java.com/en/download/help/download_options.xml).
+**Prerequisite:** Sclera requires [Java 13 or higher](https://openjdk.java.net/).
 
 *We recommend against installing Sclera with root/admin permissions. Sclera does not need root access for installation or at runtime.*
 
@@ -35,7 +35,7 @@ In --add and --remove above, 'plugin' has the format 'org:name:version', where
 'org:' and ':version' are optional. When not specified, 'org' defaults to
 'com.scleradb' and 'version' defaults to the latest installable version.
 
-Sclera requires Java 11 or higher.
+Sclera requires Java 13 or higher.
 ```
 
 ## Installing Sclera Core Packages and Shell
