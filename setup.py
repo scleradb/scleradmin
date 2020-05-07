@@ -12,7 +12,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/scleradb/scleradmin",
-    keywords="scleradb sclera virtualization admin installer",
+    keywords="sql query-processor analytics streaming-data data-management data-cleaning data-virtualization plugin-architecture admin installer cli",
     packages=["src"],
     package_data={
         "src": ["config/sclera.conf"],
