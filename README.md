@@ -1,6 +1,7 @@
 # Sclera Platform Administration Tool
 
 [![PyPI version](https://badge.fury.io/py/scleradmin.svg)](https://badge.fury.io/py/scleradmin)
+[![Downloads](https://pepy.tech/badge/scleradmin)](https://pepy.tech/project/scleradmin)
 
 [Sclera](https://www.scleradb.com) is a stand-alone SQL processor with native support for machine learning, data virtualization and streaming data.
 
